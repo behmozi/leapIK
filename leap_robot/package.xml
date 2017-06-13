@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<package>
+  <name>leap_robot</name>
+  <version>0.0.0</version>
+<license>BSD</license>
+  <description>The leap_robot package</description>
+
+  <maintainer email="behradmozafari@yahoo.com">behrad</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>leap_motion</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>leap_interface</build_depend>
+  <run_depend>leap_motion</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>leap_interface</run_depend>
+  <run_depend>controller_manager</run_depend>
+  <run_depend>diff_drive_controller</run_depend>
+  <run_depend>gazebo_ros</run_depend>
+  <run_depend>gazebo_ros_control</run_depend>
+  <run_depend>joint_state_controller</run_depend>
+  <run_depend>joint_state_publisher</run_depend>
+  <run_depend>position_controllers</run_depend>
+  <run_depend>robot_state_publisher</run_depend>
+  <run_depend>rqt_robot_steering</run_depend>
+  <run_depend>rviz</run_depend>
+  <run_depend>urdf</run_depend>
+  <run_depend>xacro</run_depend>
+
+
+
+  <export>
+
+
+  </export>
+
+</package>
+
+
+
+

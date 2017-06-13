@@ -1,0 +1,20 @@
+
+<!-- -*- mode: XML -*- -->
+<launch>
+
+  <arg name="model" default="$(find leap_robot)/urdf/cougarbot.urdf"/>
+  <arg name="gui" default="false" />
+  <arg name="source_list" default="mainjst" />
+  <arg name="rvizconfig" default="$(find leap_robot)/rviz/urdf.rviz" />
+
+  <param name="robot_description" command="$(find xacro)/xacro.py $(arg model)" />
+  <param name="use_gui" value="$(arg gui)"/>
+  <node name="sender" pkg="leap_motion" type="sender.py" />
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <rosparam param="source_list">["main/joint_states"]</rosparam>
+  </node>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+  <node name="msub" pkg="leap_robot" type="msub.py" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+
+</launch>
